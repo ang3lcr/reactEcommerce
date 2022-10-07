@@ -8,6 +8,7 @@ import MyNavBar from './components/MyNavBar'
 import LoadingScreen from './components/LoadingScreen'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProductsThunk } from './store/slices/products.slice';
+import ProtectedRoutes from './components/ProtectedRoutes'
 
 
 function App() {
@@ -32,7 +33,10 @@ useEffect(() => {
       <Route path="/" element={<Home />}/> //All products
       <Route path="/product/:id" element={<ProductDetails />}/> //ProductDetails
       <Route path="/login" element={<Login />}/> //Login
-      <Route path="/purchases/" element={<Purchases />}/> //Favorites
+
+      <Route element={<ProtectedRoutes />}>
+        <Route path="/purchases/" element={<Purchases />}/> //Favorites
+      </Route>
     </Routes>
   </HashRouter>
   )

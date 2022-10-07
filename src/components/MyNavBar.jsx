@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom'
 
 function MyNavBar() {
 
+
+  const logout = () => {
+    localStorage.setItem("token", "");
+  }
+
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
@@ -12,6 +17,8 @@ function MyNavBar() {
           <Nav.Link as={Link} to="/login">Login</Nav.Link>
           <Nav.Link as={Link} to="/purchases">Purchases</Nav.Link>
           <Nav.Link >Cart(sidevar)</Nav.Link>
+          <Nav.Link onClick={logout}>Logout</Nav.Link>
+
         </Nav>
       </Container>
     </Navbar>

@@ -17,6 +17,8 @@ img{
 }
 
 .card-img{
-    height: 300px;
-    width: 10%;
+    height: 400px;
+    object-fit: contain;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
 }
