@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.product-detail-img{
+    width: 300px;
+    height: 400px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.description{
+    margin-top: 2%;
+    width: 30%;
+}
+
+.related-products{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    
+}
